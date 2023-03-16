@@ -1,0 +1,10 @@
+// Your jsconfig.json or tsconfig.json
+// 通过设置paths让next可支持别名
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+    }
+  }
+}
