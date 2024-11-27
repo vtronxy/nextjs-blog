@@ -1,5 +1,5 @@
 import Head from 'next/head';
-
+import { useRouter } from 'next/router';
 import { MainLayout, siteTitle } from '@/components';
 import { useStoreContext } from '@/contexts'
 import utilStyles from '@/styles/utils.module.css';
@@ -10,10 +10,16 @@ import { sleep } from '@/apis'
 //NOTE: Home 首页
 export default function Home(props) {
   const { test } = props;
+  const router = useRouter();
   console.log('Home is render complete');
 
   const globalInitData = useStoreContext();
   console.log('Home: globalInitData', globalInitData);
+
+  const handleDynamicClick = () => {
+    router.push('/posts/[id]', undefined, {shallow: true});
+  }
+
   return (
     <MainLayout home>
       <Head>
@@ -28,6 +34,10 @@ export default function Home(props) {
       </section>
       <h2>
         <Link href="/posts/first-post">first posts</Link>
+        
+        <br />
+        <Link href="/posts/1">1 posts</Link>
+        <button onClick={handleDynamicClick}>1 posts</button>
       </h2>
     </MainLayout>
   );

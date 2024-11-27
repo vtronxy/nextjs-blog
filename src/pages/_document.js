@@ -67,7 +67,7 @@ export default function MyDocument({ appInitialData }) {
         >
           {appInitialData}
         </div>
-        {/* Main 传递额外属性数据后，_app.js 无法接受该属性数据, 不知道该 */}
+        {/* Main 传递额外属性数据后，_app.js 无法接受该属性数据 */}
         <Main className="fuck your fuck" id="fuck" appInitialData={appInitialData}/>
         {/* <Main /> */}
         <NextScript />

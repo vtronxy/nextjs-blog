@@ -99,22 +99,20 @@ export default MyApp;
  * next dev headers are overwritten to prevent caching locally
  */
 
-/*
-static async getInitialProps({Component, router, ctx}) {
-  info('Execute _App getInitialProps()!', 'executeReport');
+// export async function getInitialProps({Component, router, ctx}) {
+//   info('Execute _App getInitialProps()!', 'executeReport');
   
-  // app的getInitialProps会在服务端被调用一次，在前端每次切换页面时被调用。
+//   // app的getInitialProps会在服务端被调用一次，后续在前端每次切换页面时被调用。
 
-  let pageProps = {}, appProps = {};
-  if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
-  }
-  if (ctx && !ctx.req) {//客户端执行
-    // 直接从 HTML 中取数据
-      appProps = window.__NEXT_DATA__.props.appProps;
-  } else {//服务端执行
-      appProps = await executeAsyncFoo();
-  }
-  return {pageProps, appProps}
-}
-*/
+//   let pageProps = {}, appProps = {};
+//   if (Component.getInitialProps) {
+//       pageProps = await Component.getInitialProps(ctx);
+//   }
+//   if (ctx && !ctx.req) {//客户端执行
+//     // 直接从 HTML 中取数据
+//       appProps = window.__NEXT_DATA__.props.appProps;
+//   } else {//服务端执行
+//       appProps = await executeAsyncFoo();
+//   }
+//   return {pageProps, appProps}
+// }
