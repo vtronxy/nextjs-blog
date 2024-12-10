@@ -39,6 +39,7 @@ export default function Home(props) {
         <Link href="/posts/1">1 posts</Link>
         <button onClick={handleDynamicClick}>1 posts</button>
       </h2>
+      <div>{props.unuse.test}</div>
     </MainLayout>
   );
 }
@@ -60,6 +61,7 @@ export async function getServerSideProps(context) {
   console.log('Home getServerSideProps running');
   await sleep(1000);
   console.log('Home getServerSideProps end');
+  throw new Error('tttttt hhhhh');
   return {
     props: {
       test: '11111'

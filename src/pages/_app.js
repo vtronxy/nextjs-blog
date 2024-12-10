@@ -11,8 +11,7 @@ import "@/styles/globals.css"; // NOTE: 引入全局样式及布局，默认支�
 // 抽象封装 useStore
 // viewport meta 标签要添加到 _app.js 当中
 function MyApp({ Component, pageProps, globalInitData }) {
-  console.log("_app render");
-  console.log("render hook globalInitData: ", globalInitData);
+  console.log("_app render globalInitData: ",globalInitData);
   // console.log("_document pass by props: ", getGlobalData("initAppData"));
   // const { appInitialData } = useStoreContext() || {};
   // console.log("appInitialData: ", appInitialData);

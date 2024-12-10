@@ -32,15 +32,15 @@ export default function FirstPost() {
 }
 
 // 在开发模式，该函数getStaticProps，每次请求时都会执行
-// export async function getStaticProps() {
-//     // Get external data from the file system, API, DB, etc.
-//     const data = null;
+export async function getStaticProps() {
+    // Get external data from the file system, API, DB, etc.
+    const data = null;
 
-//     // The value of the `props` key will be
-//     //  passed to the `Home` component
-//     return {
-//       props: {
-//         data
-//       }
-//     }
-// }
+    // The value of the `props` key will be
+    //  passed to the `Home` component
+    return {
+      props: {
+        data
+      }
+    }
+}
