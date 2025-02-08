@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps, globalInitData }) {
         <div className="layout">
           <Component {...pageProps} />
         </div>
+        <h2>这是测试环境</h2>
       </StoreContextProvider>
     </>
   );
